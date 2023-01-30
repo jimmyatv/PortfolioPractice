@@ -271,8 +271,18 @@ footer hr{
     margin-bottom: 20px;;
 }
 
+footer div {
+    padding-bottom:  30px;
+}
+
 footer a{
-    margin: 0.7rem;
-    margin-bottom: 20px;
+    margin-right: 2rem;
+    font-size: 4rem;
+    color: var(--black);
+}
+
+footer a:hover {
+    color: var(--white);
+    transition: .3s linear;
 }
 
