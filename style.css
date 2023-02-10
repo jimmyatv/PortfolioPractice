@@ -10,8 +10,6 @@
     --primary: rgb(87, 84, 84);
     --secondary: #fc4311;
 
-    --burgerListColor: #1f103f;
-    --burgerColor: #12002f;
     --black: #000;
     --white: #fff;
     --textColor1: rgb(148, 143, 143);
@@ -61,6 +59,20 @@ img{
 HEADER SECTION
 ************ */
 
+/* ADDed SECTION for Burger menu - Andrijana TiCo*/
+
+.container {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.hamburger {
+    display: none;
+}
+
 header{
     background-color: var(--primary);
     display: flex;
@@ -90,7 +102,7 @@ header nav ul{
    
 }
 
-  header nav ul li{
+header nav ul li{
     display: inline-block;
     margin-left: 20px;
     
@@ -290,47 +302,30 @@ footer a:hover {
 }
 
 
-/* ADDed SECTION for Burger menu - Andrijana TiCo*/
-
-.container {
-    width: 90%;
-    margin: auto;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.hamburger {
-    display: none;
-}
-
-.mobile-nav {
-    display: none;
-}
-
-/* RESPONSIVE - Andrijana TiCo*/
+/* RESPONSIVE 768px - Andrijana TiCo*/
 
 @media screen and (max-width: 768px) {
-    header ul {
-        display: none;
-    }
-
+    
+    /* HAMBURGER MENU AND NAV BAR */
     .container {
         width: 98%;
     }
 
     .hamburger {
-    position: relative;
-    display: block;
-    width: 35px;
-    height: 35px;
-    cursor: pointer;
+        position: relative;
+        display: block;
+        width: 35px;
+        height: 35px;
+        cursor: pointer;
+        margin-right: 15px;
+        top: 0; 
+        right: 0;
 
-    appearance: none;
-    background: none;
-    outline: none;
-    border: none;
-}
+        appearance: none;
+        background: none;
+        outline: none;
+        border: none;
+    }
 
     .hamburger .bar, .hamburger::after, .hamburger::before {
         content: '';
@@ -354,24 +349,34 @@ footer a:hover {
         opacity: 0;
     }
 
+    .navBar {
+        height: 55px;
+        background-color: var(--secondary);
+        width: 100%;
+        position: fixed;
+        top: 0;
+        padding-bottom: 5px;
+    }
+     
+    .about {
+        position: relative;
+        z-index: -1;    
+    }
+
     .mobile-nav {
         position: fixed;
-        top: 9%;
+        top: 0%;
         left: 100%;
         width: 100%;
         min-height: 100vh;
         display: block;
         z-index: 98;
-        background-color: var(--burgerColor);
+        background-color: var(--secondary);
         padding-top: 120px;
-        transition: 0.4s;
+        transition: 0.7s;
     }
 
-    .mobile-nav.is-active {
-        left: 0;
-    }
-
-    .mobile-nav a {
+    .mobile-nav li {
         display: block;
         width: 100%;
         max-width: 200px;
@@ -379,15 +384,118 @@ footer a:hover {
         text-align: center;
         margin-bottom: 16px;
         padding: 12px 16px;
-        background-color: var(--burgerListColor);
+        background-color: var(--textColor2);
+        border-radius: 25px 0 25px 0;
 
         color: var(--white);
         text-decoration: none;
     }
 
-    .mobile-nav a:hover {
-        opacity: 0.8;
-        transition: 0.6s;
+
+    .mobile-nav.is-active {
+        left: 0;
+    }
+
+    .hero a{
+        padding: 6px 24px;
+        border-radius: 8px;
+        font-size: 16px;
+    }
+
+    header span {
+        position: relative;
+        top: 0;
+        padding-top: 5px;
+     }
+
+    header span, .hamburger {
+        position: fixed;
+        z-index: 99;
+        margin-top: 8px;
+    }
+
+    /* ABOUT SECTION */
+
+    .about .blog {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .about .blog div:nth-child(2) {
+        margin: 40px 0;
+    }
+
+    .about article div {
+        flex: 0 0 90%;
+    }
+
+    /* FOOTER */
+    footer h2 {
+        font-size: 32px;
+        padding-top: 30px;
+    }
+
+    footer a {
+        font-size: 28px;
     }
 }
 
+
+/* Responsive for mobile phones 567px*/
+
+@media screen and (max-width: 567px) {
+
+    /* MAIN */
+    h2 {
+        font-size: 30px;
+    }
+    h3 {
+        font-size: 2.6rem;
+    }
+
+    h4 {
+        font-size: 1.8rem;
+    }
+
+    p {
+        font-size: 1.4rem;
+    }
+
+    /* HERO */
+    .hero a{
+        padding: 4px 22px;
+        border-radius: 6px;
+        font-size: 14px;
+    }
+
+    /* INTEREST */
+    .blog .interests1 {
+        width: 20%;
+    }
+    /* SKILLS */
+    .skills article {
+        display: flex;
+        flex-direction: column;
+        width: 70%;
+        margin: auto;
+    }
+
+    .skills article div:nth-child(2) {
+        margin: 30px 0;
+    }
+
+    /* FOOTER */
+
+    footer h2 {
+        font-size: 28px;
+        padding-top: 30px;
+    }
+
+    footer a {
+        font-size: 22px;
+    }
+
+    
+
+}
