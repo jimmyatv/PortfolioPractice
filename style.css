@@ -88,8 +88,8 @@ header span{
 }
 
 header span:hover{
-    color: var(--secondary);
-    transition: 0.8s;
+    opacity: 0.8;
+    transition: 0.5s linear;
 }
 
 header div a{
