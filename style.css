@@ -118,6 +118,21 @@ header nav ul li a:hover{
     transition: 0.8s;
 }
 
+.fa-brands {
+    font-size: 50px;
+}
+
+.fa-html5 {
+    color: red;
+}
+
+.fa-css3 {
+    color: rgb(89, 141, 190);
+}
+
+.fa-js {
+    color: yellow;
+}
 
 /* ************
 HERO SECTION
@@ -232,6 +247,11 @@ SKILLS SECTION
     height: 4px;
     width: 7%;
     margin-bottom: 20px;
+}
+
+.skills h4 {
+    padding: 20px 0;
+    font-size: 32px;
 }
 
 .skills article{
@@ -430,6 +450,16 @@ footer a:hover {
         flex: 0 0 90%;
     }
 
+    /* SKILLS */
+    .fa-brands {
+        font-size: 40px;
+    }
+
+    .skills h4 {
+        font-size: 22px;
+    }
+
+
     /* FOOTER */
     footer h2 {
         font-size: 32px;
@@ -455,7 +485,7 @@ footer a:hover {
     }
 
     h4 {
-        font-size: 1.8rem;
+        font-size: 2rem;
     }
 
     p {
@@ -483,6 +513,10 @@ footer a:hover {
 
     .skills article div:nth-child(2) {
         margin: 30px 0;
+    }
+
+    .fa-brands {
+        font-size: 35px;
     }
 
     /* FOOTER */
