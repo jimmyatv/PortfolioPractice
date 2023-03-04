@@ -8,13 +8,13 @@
 
 :root{
     --primary: rgb(87, 84, 84);
-    --secondary: #fc4311;
+    --secondary: #e7633e;
 
     --black: #000;
     --white: #fff;
     --textColor1: rgb(148, 143, 143);
-    --textColor2: #3d3c3c;
-    --textColor3: rgb(247, 120, 36);
+    --textColor2: #494646;
+    --textColor3: rgb(233, 105, 20);
     --padding: 30px 10px;
 }
 
@@ -73,6 +73,7 @@ HEADER SECTION
     display: none;
 }
 
+
 header{
     background-color: var(--primary);
     display: flex;
@@ -109,12 +110,12 @@ header nav ul li{
 }
 
 header nav ul li a{
-    color: var(--secondary);
+    color: var(--white);
     text-decoration: none;
 }
 
 header nav ul li a:hover{
-    color: white;
+    color: var(--secondary);
     transition: 0.8s;
 }
 
@@ -123,7 +124,7 @@ header nav ul li a:hover{
 }
 
 .fa-html5 {
-    color: red;
+    color: var(--myinterest);
 }
 
 .fa-css3 {
@@ -182,8 +183,8 @@ HERO SECTION
     border-radius: 10px;
 }
 .hero a:hover{
-    color: var(--secondary);
     background-color: var(--primary);
+    border-radius: 20px 0;
     transition: 0.8s;
 }
 
@@ -238,7 +239,10 @@ INTERESTS SECTION
 
 }
 .blog .interests1{
-    background-color: red;
+    background-color: var(--secondary);
+    color: var(--white);
+    opacity: 0.9;
+    border-radius: 0 0 0 10px;
     width: 30%;
     position: absolute;
     top: 0;
@@ -453,9 +457,8 @@ footer a:hover {
     }
 
     header span {
-        position: relative;
-        top: 0;
-        padding-top: 5px;
+        position: absolute;
+        top: 1%;
      }
 
     header span, .hamburger {
